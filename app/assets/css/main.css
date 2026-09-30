@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Brand tokens — change these three values and the whole site re-colors.
+  deep green  = agriculture / trust
+  gold        = harvest / wheat
+  cream       = natural, paper-like background
+*/
+:root {
+  --color-brand-green: #1f4d2c;
+  --color-brand-green-dark: #143620;
+  --color-brand-gold: #c99a2e;
+  --color-brand-cream: #faf7ef;
+}
+
+body {
+  background-color: var(--color-brand-cream);
+  color: #1f2937;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-md bg-[var(--color-brand-green)] px-5 py-2.5 text-white font-medium transition hover:bg-[var(--color-brand-green-dark)];
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded-md border border-[var(--color-brand-green)] px-5 py-2.5 text-[var(--color-brand-green)] font-medium transition hover:bg-[var(--color-brand-green)] hover:text-white;
+}
+
+.section {
+  @apply mx-auto max-w-6xl px-6 py-16;
+}
+
+.card {
+  @apply rounded-xl border border-black/5 bg-white p-6 shadow-sm transition hover:shadow-md;
+}
