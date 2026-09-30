@@ -28,7 +28,7 @@
         <p class="font-semibold">Contact</p>
         <ul class="mt-2 space-y-1 text-sm text-white/70">
           <li>Punjab, Pakistan</li>
-          <li><a href="mailto:info@duresabeeh.com" class="hover:text-white">info@duresabeeh.com</a></li>
+          <li><a href="mailto:sabeehedu@gmail.com" class="hover:text-white">sabeehedu@gmail.com</a></li>
         </ul>
       </div>
     </div>

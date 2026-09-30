@@ -1,4 +1,8 @@
 <script setup lang="ts">
+const contacts = [
+  { name: 'Muhammad Abrar Sheikh', phone: '+923004430041' },
+  { name: 'Muhammad Irfan Sheikh', phone: '+923006942217' }
+]
 const form = reactive({ name: '', phone: '', message: '' })
 const submitted = ref(false)
 
@@ -19,7 +23,23 @@ function submit() {
       <div>
         <h2 class="text-xl font-bold text-[var(--color-brand-green)]">Get in Touch</h2>
         <p class="mt-3 text-gray-700">Punjab, Pakistan</p>
-        <p class="text-gray-700">info@duresabeeh.com</p>
+        <p class="text-gray-700">sabeehedu@gmail.com</p>
+        <div class="mt-6 space-y-4">
+  <a
+    v-for="c in contacts"
+    :key="c.phone"
+    :href="`tel:${c.phone}`"
+    class="card flex items-center gap-4 !p-4 hover:border-[var(--color-brand-green)]"
+  >
+    <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[var(--color-brand-green)]/10 text-[var(--color-brand-green)]">
+      <Icon name="mdi:phone" size="20" />
+    </div>
+    <div>
+      <p class="font-semibold text-gray-800">{{ c.name }}</p>
+      <p class="text-sm text-gray-600">{{ c.phone }}</p>
+    </div>
+  </a>
+</div>
       </div>
 
       <form class="card space-y-4" @submit.prevent="submit">
